@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页展示</title>
+</head>
+<body>
+     <h1>首页展示</h1>
+     <table border="1px block soild">
+        <tr>
+
+            <td>商品编号</td>
+            <td>分类名称</td>
+        </tr>
+        {% for i in category %}
+            <tr>
+                <td>{{i.pcode}}</td>
+                <td><a href="/shoplist/?id={{ i.id }}">{{i.pname}}</a></td>
+            </tr>
+        {% endfor %}
+     </table>
+</body>
+</html>
